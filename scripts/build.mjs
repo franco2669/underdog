@@ -342,7 +342,6 @@ function homePage() {
     })}
     <section class="quote-section reveal">
       <p>The rescue exists for the dogs with no other path. When time, money, behavior, or medical need has made everyone else step back, Underdog Heroes steps closer.</p>
-      <span>Underdog Heroes standard</span>
     </section>
     <section class="story-strip" aria-labelledby="proof-title">
       <div class="section-heading">
