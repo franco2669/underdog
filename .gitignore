@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+npm-debug.log*
+*.log
+
+# Local exploration and QA artifacts
+qa-visual/
+qa-image-contact-sheet.jpg
+mocks/
+skills/
+style-scratch.html
+
+# Source interview material stays local unless intentionally published.
+Underdog Heroes Rescue Q&A.pdf
