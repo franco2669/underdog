@@ -8,7 +8,7 @@ export const contact = {
   fosterEmail: "Foster@underdogheroes.org",
   donateEmail: "Donations@underdogheroes.org",
   infoEmail: "info@underdogheroes.org",
-  instagram: "https://www.instagram.com/underdogheroes",
+  instagram: "https://www.instagram.com/underdogheroes_/",
   facebook: "https://www.facebook.com/underdogheroes",
   currentDonateUrl: "https://www.underdogheroes.org/donate-today"
 };
