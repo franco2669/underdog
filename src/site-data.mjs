@@ -270,7 +270,7 @@ export const founderStory = [
 export const faqs = [
   {
     q: "What kind of dogs does Underdog Heroes focus on?",
-    a: "Power breeds and hard cases: pit bulls, mastiffs, cane corsos, rotties, bully mixes, and other dogs who need experienced, honest handling."
+    a: "Power breeds and hard cases: pit bulls, mastiffs, cane corsos, rottweilers, bully mixes, and other dogs who need experienced, honest handling."
   },
   {
     q: "Why is the adoption process so serious?",

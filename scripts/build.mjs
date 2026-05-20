@@ -330,7 +330,7 @@ function homePage() {
     ${hero({
       eyebrow: "Riverside power-breed rescue",
       title: "The dogs no one else will take.",
-      intro: "Underdog Heroes rehabs pit bulls, mastiffs, cane corsos, rotties, and bully mixes who were written off before anyone did the work.",
+      intro: "Underdog Heroes rehabs pit bulls, mastiffs, cane corsos, rottweilers, and bully mixes who were written off before anyone did the work.",
       cta: [
         button("Give monthly", "/donate/"),
         button("See happy endings", "/happy-endings/", "secondary")
