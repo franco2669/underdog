@@ -246,7 +246,7 @@ function layout({ title, description, active, body, pageClass = "" }) {
   <meta property="og:url" content="${site.url}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,500;0,600;1,500&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="${asset("styles.css")}">
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
