@@ -28,22 +28,22 @@ export const ctas = [
   {
     label: "Adopt",
     href: "/adopt/",
-    copy: "For prepared homes who can handle the truth before the form."
+    copy: "Start with the dog in front of you, then we help decide whether the fit is right."
   },
   {
     label: "Foster",
     href: "/foster/",
-    copy: "Temporary homes where decompression and rehab can actually happen."
+    copy: "Give a dog a calm place to land while they get ready for adoption."
   },
   {
     label: "Volunteer",
     href: "/volunteer/",
-    copy: "Riverside hands for transport, walks, care work, and rescue logistics."
+    copy: "Help with walks, transport, care, events, photos, admin, or remote support."
   },
   {
-    label: "Give Monthly",
+    label: "Donate",
     href: "/donate/",
-    copy: "The Village gives the rescue a base before the next dog is in crisis."
+    copy: "One-time and monthly gifts both matter. No amount is too small to help."
   }
 ];
 
@@ -54,19 +54,19 @@ export const stories = [
     status: "Adopted",
     poster: "rain",
     image: "mercy-rain",
-    hook: "Four days in a box, in the rain, with her puppies dying around her.",
-    summary: "Mercy was found in a box in the rain with her puppies. Most of the puppies died. Two were saved. Her soul looked broken, and the work was getting her to trust again.",
+    hook: "Mercy was found in a box in the rain with her puppies, and she still found her way home.",
+    summary: "Mercy's story began in heartbreaking conditions, but it did not end there. With medical care, patience, and a safe home, she became more than what happened to her.",
     chapters: [
       {
         kicker: "Found",
-        title: "Counted out in the rain.",
+        title: "Found in the rain.",
         posterTitle: "Box",
         poster: "rain",
         image: "mercy-rain",
         copy: [
           "Mercy was found in a box in the rain with all her puppies. She had been there for about four days.",
-          "Most of the puppies had died. Only two were able to be saved. Mercy's body was still there, but the dog inside her looked gone.",
-          "This is the kind of rescue that makes people look away. Underdog Heroes did not look away."
+          "Most of the puppies had died. Only two were able to be saved. Mercy was exhausted, scared, and in need of immediate care.",
+          "Underdog Heroes stepped in so Mercy could have more than survival. She deserved time, safety, and a real chance."
         ]
       },
       {
@@ -76,9 +76,9 @@ export const stories = [
         poster: "pulse",
         image: "foster-room",
         copy: [
-          "Rehab was not just medicine. Mercy had to learn that touch did not mean more harm and that a person coming close did not mean she had to disappear inside herself.",
-          "That work is quiet. It looks like routine, patience, food, clean bedding, and not forcing a dog to perform gratitude before she feels safe.",
-          "The goal was not to make a good story fast. The goal was to get Mercy back."
+          "Recovery was not just medicine. Mercy needed quiet routines, gentle handling, clean bedding, food, and people who let her move at her own pace.",
+          "That kind of work is not dramatic every day. It is patient, repetitive care that slowly teaches a dog they are safe.",
+          "The goal was never to rush a happy ending. The goal was to help Mercy feel like herself again."
         ]
       },
       {
@@ -88,9 +88,9 @@ export const stories = [
         poster: "doorway",
         image: "home-safe",
         copy: [
-          "When a dog like Mercy lands in the right home, the ending is not cute. It is earned.",
-          "Her adoption is proof of the whole model: take the dog others counted out, tell the truth, do the work, and wait for the home that can carry the responsibility.",
-          "Mercy's archive matters because the next person who wants to help needs to see what patience can become."
+          "When a dog like Mercy lands in the right home, the ending is beautiful because it was earned slowly.",
+          "Her adoption shows what rescue can become when people tell the truth, do the work, and wait for the family that can love the dog in front of them.",
+          "Mercy's story matters because it shows what patience, support, and a fighting chance can become."
         ]
       }
     ]
@@ -101,19 +101,19 @@ export const stories = [
     status: "Adopted",
     poster: "pulse",
     image: "rosa-care",
-    hook: "Skin infections, a body too thin, and a leg others recommended amputating.",
-    summary: "Rosa was so sick and skinny that many people thought euthanasia was the kindest option. The rescue refused the recommended amputation and treated her day after day.",
+    hook: "Rosa came in fragile, sick, and hurting. Her future changed because someone kept showing up.",
+    summary: "Rosa needed steady medical care, patience, and someone willing to believe her story was not finished. Today she is a happy ending with a life beyond the injury.",
     chapters: [
       {
         kicker: "Against advice",
-        title: "Everyone could see how bad it was.",
+        title: "Her condition was serious.",
         posterTitle: "Rosa",
         poster: "pulse",
         image: "rosa-care",
         copy: [
-          "Rosa was found in terrible condition. She was painfully thin and fighting skin infections that made people wonder if saving her was realistic.",
-          "Her back leg was recommended for amputation. We refused to treat that recommendation as the only future Rosa had.",
-          "There are dogs who need someone stubborn enough to see past the first exam."
+          "Rosa was found in painful condition. She was thin, uncomfortable, and fighting infections that needed consistent care.",
+          "Her back leg was recommended for amputation. The rescue asked what else could be done before accepting that as her only future.",
+          "Some dogs need time, advocacy, and a team willing to look past the first hard moment."
         ]
       },
       {
@@ -123,9 +123,9 @@ export const stories = [
         poster: "list",
         image: "rosa-care",
         copy: [
-          "Every day, sugar rubs and steady care helped nurse Rosa back to life.",
-          "That detail matters because it is the rescue in miniature: unglamorous, repeated care that does not look heroic until you see the dog months later.",
-          "Rosa's recovery was not a miracle. It was labor."
+          "Every day, sugar rubs and steady care helped Rosa heal.",
+          "That detail matters because rescue is often quiet work: cleaning, treating, feeding, comforting, checking again, and doing it all tomorrow.",
+          "Rosa's recovery was not magic. It was care repeated long enough for her body to catch up."
         ]
       },
       {
@@ -135,9 +135,9 @@ export const stories = [
         poster: "doorway",
         image: "home-safe",
         copy: [
-          "Rosa became the answer to everyone who thought she was too far gone.",
-          "Her story is why the site needs happy endings. Donors, fosters, and adopters need to see what their patience can turn into.",
-          "Rosa is the reason we do not let the first opinion become the whole future."
+          "Rosa became a reminder that dogs can live far beyond the worst thing that happened to them.",
+          "Her story belongs beside the gentler success stories too, because rescue is not only crisis. It is the everyday joy that comes after.",
+          "Rosa is one reason the rescue keeps asking for a second look, a little more time, and the right support."
         ]
       }
     ]
@@ -148,19 +148,19 @@ export const stories = [
     status: "Adopted",
     poster: "mastiff",
     image: "betty-gate",
-    hook: "A mastiff counted out for aggression, fear, and the size of the challenge.",
-    summary: "Betty the mastiff was labeled aggressive and counted out. Her placement took a partner willing to be patient and accept that love would be an uphill battle.",
+    hook: "Betty needed people who could see the fear underneath the behavior and give her a safe path forward.",
+    summary: "Betty the mastiff needed patience, structure, and a home prepared for her size and needs. Her adoption shows how transparency helps dogs find the right people.",
     chapters: [
       {
         kicker: "Fear",
-        title: "Aggression was not the whole story.",
+        title: "Behavior was part of her story.",
         posterTitle: "Betty",
         poster: "mastiff",
         image: "betty-gate",
         copy: [
-          "Betty was a mastiff who would be aggressive. That label could have been the end of her story.",
-          "Underdog Heroes reads behavior as information, not as a marketing problem to hide. Fear, size, and power all have to be taken seriously.",
-          "The question was not whether Betty was easy. She was not. The question was whether anyone was willing to do the hard thing correctly."
+          "Betty was a mastiff with behavior that had to be taken seriously. That did not mean her story was over.",
+          "Underdog Heroes treats behavior as information. Fear, size, strength, and safety all matter when a dog is being placed.",
+          "The question was not whether Betty was easy. The question was what she needed, and who could meet her there."
         ]
       },
       {
@@ -170,9 +170,9 @@ export const stories = [
         poster: "list",
         image: "adopt-application",
         copy: [
-          "Betty needed a partner that wanted to be patient and knew it would be an uphill battle of love.",
-          "That is the standard for placement: not the first person who wants the dog, but the person or partner who understands the dog.",
-          "For power breeds, the wrong optimism can be dangerous. The right patience can save a life."
+          "Betty needed a person who understood patience and did not expect love to erase fear overnight.",
+          "That is the standard for placement: not the first person who wants the dog, but the person who understands the dog.",
+          "The right match protects everyone: the dog, the adopter, and the life they are trying to build together."
         ]
       },
       {
@@ -182,9 +182,9 @@ export const stories = [
         poster: "doorway",
         image: "home-safe",
         copy: [
-          "Betty's story belongs beside Mercy and Rosa because it shows the behavioral side of the rescue.",
-          "Some dogs are medically hard. Some are emotionally shut down. Some are powerful and afraid. The work changes, but the rule does not: tell the truth and find the fit.",
-          "Behavioral truth is not a stain on the dog. It is the information that gets the dog placed safely."
+          "Betty's story belongs beside Mercy and Rosa because rescue is not only medical. Sometimes the need is behavior, structure, and trust.",
+          "Some dogs need medicine. Some need quiet. Some need experienced handling. The work changes, but the promise stays the same: be honest and find the fit.",
+          "Transparency is not a stain on the dog. It is how the dog gets a safer future."
         ]
       }
     ]
@@ -195,37 +195,37 @@ export const processSteps = [
   {
     step: "01",
     title: "Rescue",
-    copy: "The dog comes from a shelter, a crisis, or a situation where waiting means losing them."
+    copy: "A dog comes from a shelter, a crisis, or a home where they need help getting safe."
   },
   {
     step: "02",
-    title: "Rehab",
-    copy: "We assess the dog in real life: health, fear, dog behavior, people behavior, and what they can handle."
+    title: "Care",
+    copy: "We learn who they are: health, behavior, fear, confidence, routine, and what support they need next."
   },
   {
     step: "03",
-    title: "Filter",
-    copy: "The adoption path tells applicants what the dog needs before anyone falls in love with a photo."
+    title: "Match",
+    copy: "Applicants learn what the dog needs before anyone makes promises based only on a photo."
   },
   {
     step: "04",
     title: "Home",
-    copy: "The dog goes home only when the match is real. Support continues after adoption."
+    copy: "The dog goes home when the match is right, and support continues after adoption."
   }
 ];
 
 export const impactNotes = [
   {
-    label: "Best support model",
+    label: "Most steady support",
     value: "Monthly donors"
   },
   {
-    label: "Current gap",
-    value: "People think donations are too small to matter"
+    label: "What people miss",
+    value: "Small gifts add up"
   },
   {
-    label: "What pooled gifts cover",
-    value: "Food, medicine, emergency care, shelter, bedding"
+    label: "What donations cover",
+    value: "Food, medicine, vet care, shelter, bedding"
   }
 ];
 
@@ -233,21 +233,21 @@ export const volunteerRoles = [
   {
     title: "Saturday morning dog walker",
     need: "Open role",
-    when: "Saturday mornings, target window 9 to 12",
-    where: "Riverside, exact location confirmed after intake",
-    experience: "No experience needed for some dogs. Large-breed comfort preferred."
+    when: "Saturday mornings",
+    where: "Location confirmed after intake",
+    experience: "No experience needed for some dogs. Large-dog comfort is helpful."
   },
   {
     title: "Transport driver",
     need: "As needed",
     when: "One or two runs a month",
-    where: "Riverside to shelter, vet, foster, or partner rescue",
+    where: "Shelter, vet, foster, or partner rescue runs",
     experience: "Licensed, insured, calm with large dogs."
   },
   {
     title: "Medical care helper",
     need: "Care support",
-    when: "Target window 5 to 7 on selected weekdays",
+    when: "Selected weekday evenings",
     where: "Confirmed care location",
     experience: "Some dog care experience preferred."
   },
@@ -256,29 +256,29 @@ export const volunteerRoles = [
     need: "Remote support",
     when: "Flexible weekly block",
     where: "Remote, with the rescue process",
-    experience: "Clear writing, good judgment, no drama."
+    experience: "Clear writing, good judgment, and follow-through."
   }
 ];
 
 export const founderStory = [
   "Shoshi started fostering before Covid. A senior boxer mix came into her life during a crisis, and when he was adopted she felt the loss. She also saw what a good life could look like for a dog who had almost missed it.",
-  "That first foster turned into more time at shelters, more dogs in need, and eventually Underdog Heroes. She built the rescue from a two-bedroom apartment and kept taking the dogs other people were not set up to handle.",
-  "What keeps her doing it is the need and her own standard. She has treated dogs with parvo, puppies with pneumonia, severe skin infections, fear, shutdown, and power-breed behavior that cannot be sugar coated.",
-  "Her belief is direct: these dogs are products of their environment and their people. Many need time before anything beautiful can happen. The rescue exists to give them that time, then place them with humans who understand the responsibility."
+  "That first foster turned into more time at shelters, more dogs in need, and eventually Underdog Heroes. The rescue grew around a simple belief: dogs deserve honesty, preparation, and people willing to keep showing up.",
+  "The work includes parvo, puppies with pneumonia, severe skin infections, fear, shutdown, and behavior that has to be handled responsibly. Transparency is what protects the dog and the people who want to help.",
+  "Underdog Heroes gives abused, neglected, and overlooked dogs a fighting chance, then places them with humans who understand both the joy and the responsibility."
 ];
 
 export const faqs = [
   {
     q: "What kind of dogs does Underdog Heroes focus on?",
-    a: "Power breeds and hard cases: pit bulls, mastiffs, cane corsos, rottweilers, bully mixes, and other dogs who need experienced, honest handling."
+    a: "Dogs who have been abused, neglected, overlooked, or need extra care before they can safely move into a home. Some are large breeds, and some are simply dogs who need time, structure, and the right people."
   },
   {
     q: "Why is the adoption process so serious?",
-    a: "Because the wrong home can set a rescue dog back or put people at risk. The application is meant to filter for fit before anyone wastes time."
+    a: "Because the right match protects everyone. The application helps us understand your home, your routine, and which dog can truly thrive with you."
   },
   {
     q: "What should adopters stop assuming?",
-    a: "Do not assume a rescued dog is ready for a perfect social-media life. When one thing is new, everything is new. They need decompression, routine, and patience."
+    a: "Please do not assume a rescued dog is ready for a picture-perfect first week. New home, new people, new sounds, and new routines are a lot. Most dogs need decompression, patience, and consistency."
   },
   {
     q: "Does fostering cost money?",
@@ -286,18 +286,18 @@ export const faqs = [
   },
   {
     q: "Why monthly donations?",
-    a: "Severe medical stories can bring one-time donations when they go viral, but monthly donors give the rescue security before the next emergency happens."
+    a: "One-time gifts help immediately, and monthly donors create stability. Steady support means the rescue can say yes before the next emergency goes viral."
   },
   {
     q: "What happens when a dog is adopted?",
     a: "We give the dog a couple of weeks in the adoptive home before celebrating. Then the profile can become a happy ending."
   },
   {
-    q: "Can first-time power-breed owners apply?",
-    a: "It depends on the dog. Some dogs need prior experience, a specific home setup, no young kids, no other dogs, or a commitment to training."
+    q: "Can first-time large-dog or rescue-dog owners apply?",
+    a: "Yes, depending on the dog. Some dogs need prior experience, a specific home setup, no young kids, no other pets, or a commitment to training. We will talk through fit honestly."
   },
   {
     q: "How can local people help if they cannot adopt?",
-    a: "Foster, volunteer, transport, help with care work, share specific needs, or join the monthly donor circle."
+    a: "Foster, volunteer, transport, help with care work, share specific needs, donate, or become a monthly donor. It takes community."
   }
 ];

@@ -82,7 +82,7 @@ function showFormStatus(form, summary) {
   status.replaceChildren();
 
   const title = document.createElement("h3");
-  title.textContent = "Application packet ready.";
+  title.textContent = "Application email ready.";
 
   const copy = document.createElement("p");
   copy.textContent = `Open the email draft, review it, then send it to ${email}.`;

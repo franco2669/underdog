@@ -2,16 +2,16 @@
   color-scheme: light;
   --brand-red: oklch(0.58 0.22 27);
   --brand-red-deep: oklch(0.42 0.18 27);
-  --brand-red-tint: oklch(0.96 0.04 27);
-  --ink: oklch(0.18 0.02 27);
-  --ink-soft: oklch(0.30 0.015 27);
-  --paper: oklch(0.985 0.005 27);
-  --paper-warm: oklch(0.96 0.008 27);
-  --n-900: oklch(0.22 0.012 27);
-  --n-700: oklch(0.42 0.008 27);
-  --n-500: oklch(0.62 0.006 27);
-  --n-300: oklch(0.86 0.004 27);
-  --n-100: oklch(0.94 0.003 27);
+  --brand-red-tint: oklch(0.955 0.045 18);
+  --ink: oklch(0.17 0.025 250);
+  --ink-soft: oklch(0.32 0.022 250);
+  --paper: oklch(0.965 0.025 235);
+  --paper-warm: oklch(0.975 0.026 88);
+  --n-900: oklch(0.22 0.018 250);
+  --n-700: oklch(0.42 0.014 250);
+  --n-500: oklch(0.62 0.011 250);
+  --n-300: oklch(0.86 0.012 235);
+  --n-100: oklch(0.935 0.015 235);
   --signal-green: oklch(0.54 0.12 148);
   --warn: oklch(0.72 0.16 75);
 
@@ -117,8 +117,8 @@ select {
   justify-content: space-between;
   min-height: 72px;
   padding: var(--space-3) clamp(1rem, 4vw, 3rem);
-  border-bottom: 1px solid oklch(0.92 0.006 27 / 0.62);
-  background: oklch(0.985 0.005 27 / 0.93);
+  border-bottom: 1px solid oklch(0.86 0.012 235 / 0.72);
+  background: oklch(0.975 0.022 235 / 0.93);
   backdrop-filter: blur(12px);
 }
 

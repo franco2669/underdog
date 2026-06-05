@@ -20,7 +20,7 @@ http://localhost:4173
 
 - `src/site-data.mjs`: site content, page data, stories, contact details, and form structure.
 - `src/styles.css`: visual system and responsive layout.
-- `src/client.js`: mobile navigation, reveal behavior, and first-party form packet handling.
+- `src/client.js`: mobile navigation, reveal behavior, and form email handling.
 - `src/assets/images/`: generated WebP rescue visuals.
 - `scripts/build.mjs`: static site generator.
 - `scripts/serve.mjs`: local static server.
@@ -28,4 +28,4 @@ http://localhost:4173
 
 ## Notes
 
-Adopt, foster, and volunteer are first-party static forms. They validate locally and prepare clean email packets to the correct rescue inbox until a direct submission service is connected.
+Adopt, foster, and volunteer are static forms. They validate locally and prepare organized emails to the correct rescue inbox until a direct submission service is connected.

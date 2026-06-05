@@ -35,7 +35,7 @@ http://localhost:4173
 
 ## Current live integrations
 
-The adopt, foster, and volunteer flows are now first-party forms in the static site. Until a direct submission service is connected, each form validates answers and prepares a clean email packet to the right inbox.
+The adopt, foster, and volunteer flows are now forms in the static site. Until a direct submission service is connected, each form validates answers and prepares an organized email to the right inbox.
 
 Donations still link to the current live donation endpoint until Givebutter or another processor is approved:
 
@@ -46,5 +46,5 @@ Donations still link to the current live donation endpoint until Givebutter or a
 - Current adoptable dog profiles and photos.
 - Real happy-ending photos and adopter quotes for Mercy, Rosa, Betty.
 - Donation cost numbers from real receipts.
-- Confirm The Village as the monthly donor name.
+- Confirm the monthly donor program name.
 - Confirm Tally, Givebutter, and Sanity setup decisions.

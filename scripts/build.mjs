@@ -185,7 +185,7 @@ function rescueForm({ id, kicker, title, intro, email, subject, submitLabel, sec
           </fieldset>`).join("")}
         <div class="form-actions">
           <button class="btn btn-primary" type="submit">${escapeHtml(submitLabel)}</button>
-          <p>This prepares a clean email packet to ${escapeHtml(email)} so the rescue gets your answers in one place.</p>
+          <p>This prepares an organized email to ${escapeHtml(email)} so the rescue gets your answers in one place.</p>
         </div>
         <div class="form-status" data-form-status hidden aria-live="polite"></div>
       </form>
@@ -202,7 +202,7 @@ function navMarkup(active) {
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
         ${nav.map((item) => `<a ${attrs({ href: item.href, "aria-current": item.id === active ? "page" : undefined })}>${escapeHtml(item.label)}</a>`).join("")}
-        <a class="nav-donate" href="/donate/" ${active === "donate" ? 'aria-current="page"' : ""}>Give Monthly</a>
+        <a class="nav-donate" href="/donate/" ${active === "donate" ? 'aria-current="page"' : ""}>Donate</a>
       </nav>
     </header>`;
 }
@@ -212,7 +212,7 @@ function footerMarkup() {
     <footer class="site-footer">
       <div>
         <a class="wordmark footer-mark" href="/">${bolt()}<span>Underdog Heroes</span></a>
-        <p>Riverside, California rescue for power-breed dogs most people already counted out.</p>
+        <p>Dog rescue for abused, neglected, and overlooked dogs who deserve a fighting chance.</p>
       </div>
       <div class="footer-links">
         <a href="mailto:${contact.adoptEmail}">Adopt: ${contact.adoptEmail}</a>
@@ -229,12 +229,7 @@ function layout({ title, description, active, body, pageClass = "" }) {
     "@type": "AnimalShelter",
     name: "Underdog Heroes",
     url: site.url,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Riverside",
-      addressRegion: "CA",
-      addressCountry: "US"
-    },
+    areaServed: "Southern California and surrounding rescue networks",
     email: contact.infoEmail
   };
 
@@ -274,7 +269,7 @@ function hero({
   posterMood = "rain",
   darkPoster = true,
   image = "last-hope",
-  posterTitle = "Last Hope",
+  posterTitle = "Fighting Chance",
   posterKicker = "Rescue work"
 }) {
   return `
@@ -294,8 +289,8 @@ function hero({
 function actionBand() {
   return `
     <section class="action-band" aria-labelledby="action-title">
-      <div class="section-kicker">Four ways in</div>
-      <h2 id="action-title">Pick the part of the work you can carry.</h2>
+      <div class="section-kicker">Ways to help</div>
+      <h2 id="action-title">It takes community.</h2>
       <div class="action-list">
         ${ctas.map((item, index) => `
           <a class="action-item reveal" href="${escapeHtml(item.href)}">
@@ -328,26 +323,26 @@ function storyTile(story, feature = false) {
 function homePage() {
   const body = `
     ${hero({
-      eyebrow: "Riverside power-breed rescue",
-      title: "The dogs no one else will take.",
-      intro: "Underdog Heroes rehabs pit bulls, mastiffs, cane corsos, rottweilers, and bully mixes who were written off before anyone did the work.",
+      eyebrow: "Dog rescue for second chances",
+      title: "Giving dogs a fighting chance.",
+      intro: "Underdog Heroes helps severely abused, neglected, and overlooked dogs heal, then finds the homes and people who can love them responsibly.",
       cta: [
-        button("Give monthly", "/donate/"),
+        button("Donate", "/donate/"),
         button("See happy endings", "/happy-endings/", "secondary")
       ],
       posterMood: "mastiff",
       image: "last-hope",
-      posterTitle: "Last Hope",
-      posterKicker: "No easy cases"
+      posterTitle: "Fighting Chance",
+      posterKicker: "Hope in action"
     })}
     <section class="quote-section reveal">
-      <p>The rescue exists for the dogs with no other path. When time, money, behavior, or medical need has made everyone else step back, Underdog Heroes steps closer.</p>
+      <p>Every dog deserves the chance to be seen for who they can become, not only what they survived.</p>
     </section>
     <section class="story-strip" aria-labelledby="proof-title">
       <div class="section-heading">
-        <p class="section-kicker">Proof, not slogans</p>
-        <h2 id="proof-title">The story is the rescue.</h2>
-        <p>Mercy, Rosa, and Betty are the spine of the new site because they show the work better than a mission statement can.</p>
+        <p class="section-kicker">Real stories</p>
+        <h2 id="proof-title">The dogs are the heroes.</h2>
+        <p>Some stories begin in crisis. Some dogs are simply overlooked for being older, quieter, bigger, or ordinary. All of them deserve to be seen.</p>
       </div>
       <div class="magazine-grid">
         ${storyTile(stories[0], true)}
@@ -357,10 +352,10 @@ function homePage() {
     ${actionBand()}
     <section class="split-section split-dark">
       <div class="split-copy reveal">
-        <p class="section-kicker">The Village</p>
-        <h2>$25 a month means the rescue is not starting from zero.</h2>
-        <p>Viral posts help in emergencies. Monthly donors make the next yes possible before the next emergency happens.</p>
-        ${button("Join the Village", "/donate/")}
+        <p class="section-kicker">Monthly giving</p>
+        <h2>$25 a month helps build steady rescue support.</h2>
+        <p>One-time donations matter. Monthly donors make it easier to plan for food, vet care, medication, bedding, and the next dog who needs help.</p>
+        ${button("Become a monthly donor", "/donate/")}
       </div>
       <div class="impact-stack reveal delay-1">
         ${impactNotes.map((item) => `
@@ -373,7 +368,7 @@ function homePage() {
     <section class="process-section" aria-labelledby="process-title">
       <div class="section-heading">
         <p class="section-kicker">How a dog gets home</p>
-        <h2 id="process-title">We do not rush the dog, or the adopter.</h2>
+        <h2 id="process-title">We move at the dog's pace.</h2>
       </div>
       <ol class="process-list">
         ${processSteps.map((step) => `
@@ -385,8 +380,8 @@ function homePage() {
       </ol>
     </section>`;
   return layout({
-    title: "Power-breed rescue in Riverside",
-    description: "Underdog Heroes rehabs power-breed dogs other rescues will not take, then routes the right adopters, fosters, volunteers, and monthly donors into the work.",
+    title: "Dog rescue for second chances",
+    description: "Underdog Heroes helps abused, neglected, and overlooked dogs get care, support, and the right homes.",
     active: "home",
     body,
     pageClass: "home"
@@ -397,9 +392,9 @@ function happyEndingsPage() {
   const body = `
     ${hero({
       eyebrow: "Happy endings",
-      title: "They were not supposed to make it.",
-      intro: "These are the dogs the rescue still carries. The ones found in boxes, counted out by vets, called too hard, too broken, too risky.",
-      cta: [button("Start with Mercy", "/happy-endings/mercy/"), button("Help the next one", "/donate/", "secondary")],
+      title: "Happy endings, hard-won and joyful.",
+      intro: "These stories hold both sides of rescue: the difficult beginnings and the everyday happiness that comes after a dog is safe.",
+      cta: [button("Start with Mercy", "/happy-endings/mercy/"), button("Help another dog", "/donate/", "secondary")],
       posterMood: "doorway",
       image: "home-safe",
       posterTitle: "Home",
@@ -407,9 +402,9 @@ function happyEndingsPage() {
     })}
     <section class="story-strip">
       <div class="section-heading wide">
-        <p class="section-kicker">The archive</p>
-        <h2>Every adopted dog becomes proof.</h2>
-        <p>We are starting with the three verified stories from the rescue interview. More stories are waiting in phone photos, DMs, and adopter updates.</p>
+        <p class="section-kicker">Rescue stories</p>
+        <h2>Every adopted dog gets to become more than their past.</h2>
+        <p>We are starting with Mercy, Rosa, and Betty. More stories will join them as Shoshi shares labeled photos, videos, and adopter updates.</p>
       </div>
       <div class="magazine-grid">
         ${stories.map((story, index) => storyTile(story, index === 0)).join("")}
@@ -459,8 +454,8 @@ function storyPage(story) {
     </article>
     <section class="related-section">
       <div class="section-heading">
-        <p class="section-kicker">More proof</p>
-        <h2>Other dogs who were counted out.</h2>
+        <p class="section-kicker">More stories</p>
+        <h2>Other dogs who found their way home.</h2>
       </div>
       <div class="related-list">
         ${stories.filter((item) => item.slug !== story.slug).map((item) => storyTile(item)).join("")}
@@ -480,27 +475,27 @@ function dogsPage() {
   const body = `
     ${hero({
       eyebrow: "Available dogs",
-      title: "No inventory grid.",
-      intro: "Available dogs change fast. We publish a profile only when the notes are current enough to protect the dog and the adopter.",
-      cta: [button("Start the adoption gate", "/adopt/"), button("Email adoption", `mailto:${contact.adoptEmail}`, "secondary")],
+      title: "Meet the dogs when the notes are ready.",
+      intro: "Available dogs change often. Profiles should show the real dog: personality, needs, photos, and the kind of home that will help them succeed.",
+      cta: [button("Learn about adoption", "/adopt/"), button("Email adoption", `mailto:${contact.adoptEmail}`, "secondary")],
       posterMood: "list",
       image: "last-hope",
       posterTitle: "Current Dogs",
-      posterKicker: "Ask first"
+      posterKicker: "Real updates"
     })}
     <section class="empty-state reveal">
       <p class="section-kicker">Current status</p>
       <h2>Ask for today's adoptable dogs.</h2>
-      <p>Before a dog gets a public profile, we verify the details that matter: name, age, breed, personality, rehab status, household requirements, deal-breakers, and current photos. Until then, start with the adoption gate or email the adoption inbox.</p>
+      <p>Before a dog gets a public profile, we verify the details that matter: name, age, personality, care needs, household fit, and current photos. Until then, start with the adoption page or email the adoption inbox.</p>
       <div class="requirement-grid">
-        ${["Who this dog is", "Who can adopt", "Who cannot adopt", "Where they are in rehab", "Photos that show current state", "Application route"].map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
+        ${["Who this dog is", "What they need", "Home fit", "Care notes", "Current photos", "How to apply"].map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
       </div>
-      ${button("Read the adoption filter", "/adopt/")}
+      ${button("Read about adopting", "/adopt/")}
     </section>
     ${actionBand()}`;
   return layout({
     title: "Available dogs",
-    description: "Available dog profiles for Underdog Heroes, structured around truth, fit, and the adoption filter.",
+    description: "Available dog profiles for Underdog Heroes, built around current photos, honest notes, and the right match.",
     active: "dogs",
     body
   });
@@ -508,27 +503,27 @@ function dogsPage() {
 
 function adoptPage() {
   const rules = [
-    "You understand decompression. A new home does not mean the dog is ready for parties, road trips, or a camera-perfect first week.",
-    "You can afford the dog after the adoption fee. Food, vet care, training, and emergencies are part of saying yes.",
-    "You are ready for a hard application. The process includes an application, phone interview, home check, references, and a meet-and-greet when it makes sense.",
-    "You will listen when the rescue says a dog is not the right fit. The right match matters more than the fast match."
+    "You understand decompression. A new home is exciting for people, but it can be overwhelming for a dog.",
+    "You are ready for the real cost of care: food, vet care, training, medication, and emergencies.",
+    "You are open to a thoughtful process that may include an application, phone interview, home check, references, and a meet-and-greet.",
+    "You understand that the right match matters more than the fastest match."
   ];
   const body = `
     ${hero({
       eyebrow: "Apply to adopt",
-      title: "The application is a filter.",
-      intro: "We are looking for prepared adopters, not the highest number of applications. If that turns some people away, it is working.",
+      title: "Start with the right fit.",
+      intro: "The adoption process helps us learn about your home, your routine, and the kind of dog who can truly thrive with you.",
       cta: [button("Start application", "#adoption-application"), button("Ask first", `mailto:${contact.adoptEmail}`, "secondary")],
       posterMood: "list",
       image: "adopt-application",
       posterTitle: "Apply",
-      posterKicker: "Fit matters"
+      posterKicker: "Right match"
     })}
     <section class="gate-section">
       <div class="section-heading wide">
         <p class="section-kicker">Before you apply</p>
-        <h2>Read this like a job description for your home.</h2>
-        <p>A beautiful rescue story does not mean the dog is ready for a beautiful first week. New home, new smells, new people, new rules: to the dog, all of it is new.</p>
+        <h2>Think about the life you can offer.</h2>
+        <p>A beautiful rescue story does not mean the dog is ready for a picture-perfect first week. New home, new people, new sounds, and new routines all take time.</p>
       </div>
       <div class="rule-list">
         ${rules.map((rule) => `<div class="rule-item reveal">${icon("check")}<p>${escapeHtml(rule)}</p></div>`).join("")}
@@ -540,26 +535,26 @@ function adoptPage() {
         <h2>What happens after you apply.</h2>
       </div>
       <ol class="process-list">
-        ${["Application", "Phone interview", "Home check", "References", "Meet-and-greet", "Adoption fee and handoff"].map((label, index) => `
+        ${["Application", "Phone interview", "Home check", "References", "Meet-and-greet", "Finalize adoption"].map((label, index) => `
           <li class="reveal">
             <span>0${index + 1}</span>
             <h3>${escapeHtml(label)}</h3>
-            <p>${escapeHtml(index === 0 ? "Tell the truth. The right details help us protect the dog and your household." : index === 1 ? "We talk through behavior, routine, deal-breakers, and fit." : index === 2 ? "The home setup has to match the dog in front of us." : index === 3 ? "Vet and personal references help confirm readiness." : index === 4 ? "Only when the match looks real do we introduce the dog." : "The support does not end when the dog goes home.")}</p>
+            <p>${escapeHtml(index === 0 ? "Share honest details so we can understand your home and the kind of dog who may fit." : index === 1 ? "We talk through behavior, routine, experience, questions, and hopes." : index === 2 ? "The home setup should match the needs of the dog in front of us." : index === 3 ? "Vet and personal references help confirm readiness." : index === 4 ? "When the match looks promising, we introduce the dog." : "If it is the right fit, we complete the adoption and help you welcome your new family member home.")}</p>
           </li>`).join("")}
       </ol>
     </section>
     ${rescueForm({
       id: "adoption-application",
-      kicker: "First-party application",
-      title: "Apply for the dog in front of you.",
-      intro: "This is the filter before the phone call. Tell the truth about your home, your limits, and the kind of dog you can responsibly handle.",
+      kicker: "Adoption application",
+      title: "Tell us about your home.",
+      intro: "This form starts the conversation. Honest answers help us guide you toward a dog who can be safe, loved, and supported in your home.",
       email: contact.adoptEmail,
       subject: "Adoption application",
       submitLabel: "Prepare adoption application",
       sections: [
         {
           legend: "Applicant",
-          copy: "Use the contact information you check fastest.",
+          copy: "Use the contact information you check most often.",
           fields: [
             { name: "fullName", label: "Full name", required: true, autocomplete: "name" },
             { name: "email", label: "Email address", type: "email", required: true, autocomplete: "email" },
@@ -571,7 +566,7 @@ function adoptPage() {
         },
         {
           legend: "Home",
-          copy: "The home setup has to match the dog, not the other way around.",
+          copy: "Every dog needs something different. Your home details help us understand fit.",
           fields: [
             { kind: "select", name: "housing", label: "Housing", required: true, options: ["Own", "Rent", "Live with family", "Other"] },
             { kind: "select", name: "yard", label: "Yard or outdoor access", required: true, options: ["Private fenced yard", "Shared yard", "No yard", "Other"] },
@@ -582,9 +577,9 @@ function adoptPage() {
         },
         {
           legend: "Fit",
-          copy: "Power-breed rescue asks more from the adopter. Be specific.",
+          copy: "Be specific about your experience, comfort level, and support plan.",
           fields: [
-            { kind: "textarea", name: "experience", label: "Experience with power breeds or hard rescue dogs", required: true },
+            { kind: "textarea", name: "experience", label: "Experience with rescue dogs or large breeds", required: true },
             { kind: "textarea", name: "decompressionPlan", label: "How will you handle the first two weeks?", required: true, help: "Think crate, quiet space, visitors, walks, car rides, kids, and other pets." },
             { kind: "select", name: "hoursAlone", label: "How long would the dog be alone on a normal day?", required: true, options: ["0 to 2 hours", "3 to 5 hours", "6 to 8 hours", "More than 8 hours"] },
             { kind: "select", name: "trainingSupport", label: "Are you open to trainer support if needed?", required: true, options: ["Yes", "Yes, if the rescue recommends it", "Not sure", "No"] },
@@ -599,14 +594,14 @@ function adoptPage() {
             { name: "personalReference", label: "Personal reference", required: true },
             { kind: "checkbox", name: "truth", label: "Everything in this application is true.", required: true },
             { kind: "checkbox", name: "homeCheck", label: "I understand a home check may be required.", required: true },
-            { kind: "checkbox", name: "hardTruth", label: "I understand the rescue may say a dog is not the right fit.", required: true }
+            { kind: "checkbox", name: "hardTruth", label: "I understand the rescue may guide me toward a better fit.", required: true }
           ]
         }
       ]
     })}`;
   return layout({
     title: "Apply to adopt",
-    description: "The Underdog Heroes adoption gate for prepared power-breed adopters.",
+    description: "The Underdog Heroes adoption application helps match each dog with the home that can support them.",
     active: "adopt",
     body
   });
@@ -614,26 +609,26 @@ function adoptPage() {
 
 function fosterPage() {
   const benefits = [
-    ["Temporary", "You are not signing up forever. You are giving one dog a safe place while the right home is found."],
-    ["Covered", "Supplies and financial support are covered by the rescue while the dog is in foster care."],
-    ["Coached", "You are not left alone with a hard dog and a wish. The rescue stays involved."],
-    ["Urgent", "A foster spot can be the difference between taking the dog and walking away."]
+    ["Temporary", "You give one dog a safe place while the right adopter is being found."],
+    ["Covered", "Supplies and financial support are provided by the rescue while the dog is in foster care."],
+    ["Fully supported", "You are not doing this alone. The rescue stays involved throughout the foster process."],
+    ["Important", "A foster home gives a dog time to decompress, learn routine, and get ready for adoption."]
   ];
   const body = `
     ${hero({
       eyebrow: "Apply to foster",
-      title: "Fosters are where rehab happens.",
-      intro: "A shelter pull is only the first yes. The dog still needs a home, a routine, and someone patient enough to let them become safe.",
+      title: "Foster homes help dogs get ready for families.",
+      intro: "Fostering is temporary, free, and fully supported. You provide a safe routine while the rescue covers supplies and stays involved.",
       cta: [button("Start foster form", "#foster-application"), button("Email fostering", `mailto:${contact.fosterEmail}`, "secondary")],
       posterMood: "pulse",
       image: "foster-room",
       posterTitle: "Foster",
-      posterKicker: "Safe routine"
+      posterKicker: "Fully supported"
     })}
     <section class="benefit-section">
       <div class="section-heading">
         <p class="section-kicker">What fosters need to know</p>
-        <h2>Fostering is free, temporary, and coached.</h2>
+        <h2>Fostering is free, temporary, and fully supported.</h2>
       </div>
       <div class="benefit-list">
         ${benefits.map(([title, copy]) => `
@@ -646,18 +641,18 @@ function fosterPage() {
     <section class="split-section">
       <div class="split-copy reveal">
         <p class="section-kicker">Baseline requirements</p>
-        <h2>The dog needs time, not chaos.</h2>
-        <p>Current foster requirements include being at least 18 and being gone no more than six hours per day. Final placement still depends on the specific dog.</p>
+        <h2>The dog needs calm and consistency.</h2>
+        <p>Current foster requirements include being at least 18 and being gone no more than six hours per day. The final match still depends on the specific dog.</p>
       </div>
       <div class="poster-column reveal delay-1">
-        ${poster({ id: "foster-door", title: "Safe Room", kicker: "Decompress", mood: "doorway", image: "foster-room" })}
+        ${poster({ id: "foster-door", title: "Safe Space", kicker: "Decompress", mood: "doorway", image: "foster-room" })}
       </div>
     </section>
     ${rescueForm({
       id: "foster-application",
-      kicker: "First-party foster form",
-      title: "Open your home before a dog runs out of options.",
-      intro: "A foster home gives the rescue time to assess, decompress, and place the dog correctly. Supplies and support are part of the deal.",
+      kicker: "Foster application",
+      title: "Open your home while a dog gets ready for adoption.",
+      intro: "A foster home gives a dog time to decompress, learn routine, and be seen clearly. Supplies, financial support, and guidance are part of the process.",
       email: contact.fosterEmail,
       subject: "Foster application",
       submitLabel: "Prepare foster application",
@@ -684,7 +679,7 @@ function fosterPage() {
         {
           legend: "Foster fit",
           fields: [
-            { kind: "checkboxGroup", name: "fosterTypes", legend: "Dogs you can realistically foster", options: ["Large power breed", "Medical recovery", "Shy or shut down", "Dog selective", "Puppies", "Emergency short hold"] },
+            { kind: "checkboxGroup", name: "fosterTypes", legend: "Dogs you can realistically foster", options: ["Large breed", "Medical recovery", "Shy or shut down", "Dog selective", "Puppies", "Emergency short hold"] },
             { kind: "textarea", name: "experience", label: "Relevant dog experience", required: true },
             { kind: "select", name: "transport", label: "Can you transport to vet visits or meet-and-greets?", required: true, options: ["Yes", "Sometimes", "No"] },
             { kind: "select", name: "timeline", label: "When could you start?", required: true, options: ["This week", "This month", "Later", "I need to talk first"] }
@@ -702,7 +697,7 @@ function fosterPage() {
     })}`;
   return layout({
     title: "Apply to foster",
-    description: "Foster with Underdog Heroes. Supplies are covered, support is included, and the work directly creates room for another rescue.",
+    description: "Foster with Underdog Heroes. Supplies are covered, support is included, and fostering helps dogs get ready for adoption.",
     active: "foster",
     body
   });
@@ -712,19 +707,19 @@ function volunteerPage() {
   const body = `
     ${hero({
       eyebrow: "Volunteer",
-      title: "More hands means more dogs.",
-      intro: "People assume enough help is already there. It is not. More hands means more dogs get walked, transported, treated, and placed.",
+      title: "More help means more dogs get care.",
+      intro: "There are on-site and remote ways to help: walking, transport, medical care support, events, photos, fundraising, admin, and more.",
       cta: [button("Start volunteer form", "#volunteer-application"), button("Email volunteer team", `mailto:${contact.infoEmail}`, "secondary")],
       posterMood: "list",
       image: "volunteer-tools",
       posterTitle: "Volunteer",
-      posterKicker: "Real help"
+      posterKicker: "Community care"
     })}
     <section class="roles-section">
       <div class="section-heading wide">
-        <p class="section-kicker">Starting role board</p>
-        <h2>Specific asks beat generic goodwill.</h2>
-        <p>These are the kinds of jobs that turn willingness into actual help: walking, transport, medical care support, and admin triage.</p>
+        <p class="section-kicker">Ways to volunteer</p>
+        <h2>Choose a way to show up.</h2>
+        <p>Some volunteers help in person. Some help from home. The best role is the one you can actually follow through on.</p>
       </div>
       <div class="role-list">
         ${volunteerRoles.map((role) => `
@@ -741,9 +736,9 @@ function volunteerPage() {
     </section>
     ${rescueForm({
       id: "volunteer-application",
-      kicker: "First-party volunteer form",
-      title: "Tell us where you can actually help.",
-      intro: "Specific availability beats vague enthusiasm. Pick the roles you can show up for, then the rescue can route you cleanly.",
+      kicker: "Volunteer interest form",
+      title: "Tell us how you would like to help.",
+      intro: "Share your availability, interests, and comfort level so the rescue can connect you with a role that fits.",
       email: contact.infoEmail,
       subject: "Volunteer application",
       submitLabel: "Prepare volunteer form",
@@ -762,7 +757,7 @@ function volunteerPage() {
           fields: [
             { kind: "checkboxGroup", name: "roles", legend: "Ways you can help", options: ["Dog walking", "Transport", "Medical care support", "Event help", "Admin or DM triage", "Photography or video", "Fundraising", "Supplies pickup"] },
             { kind: "textarea", name: "availability", label: "Availability", required: true, help: "List days, times, and how often you can show up." },
-            { kind: "select", name: "largeDogComfort", label: "Comfort with large power-breed dogs", required: true, options: ["Experienced", "Comfortable with guidance", "New but willing to learn", "Not comfortable"] },
+            { kind: "select", name: "largeDogComfort", label: "Comfort with large dogs", required: true, options: ["Experienced", "Comfortable with guidance", "New but willing to learn", "Not comfortable"] },
             { kind: "select", name: "transport", label: "Do you have reliable transportation?", required: true, options: ["Yes", "Sometimes", "No"] }
           ]
         },
@@ -777,7 +772,7 @@ function volunteerPage() {
     })}`;
   return layout({
     title: "Volunteer",
-    description: "Specific volunteer roles for Underdog Heroes, built to route Riverside helpers into real needs.",
+    description: "Volunteer with Underdog Heroes through on-site and remote roles that support the dogs and the rescue team.",
     active: "volunteer",
     body
   });
@@ -787,25 +782,25 @@ function donatePage() {
   const body = `
     ${hero({
       eyebrow: "Donate",
-      title: "Do not wait for the next emergency.",
-      intro: "Most support comes from recurring donors or from severe medical cases going viral. The Village gives the rescue a base before a dog is in crisis.",
-      cta: [button("Give now", contact.currentDonateUrl), button("Email donations", `mailto:${contact.donateEmail}`, "secondary")],
+      title: "Every donation helps a dog get care.",
+      intro: "One-time gifts help right now. Monthly donors help the rescue plan for food, vet care, medication, bedding, and emergency needs.",
+      cta: [button("Donate", contact.currentDonateUrl), button("Ask about donations", `mailto:${contact.donateEmail}`, "secondary")],
       posterMood: "pulse",
       image: "donate-village",
-      posterTitle: "The Village",
-      posterKicker: "Monthly base"
+      posterTitle: "Donate",
+      posterKicker: "Every amount helps"
     })}
     <section class="donate-core">
       <div class="village-panel reveal">
-        <p class="section-kicker">The Village</p>
+        <p class="section-kicker">Monthly giving</p>
         <h2>$25<span>/month</span></h2>
-        <p>The monthly donor circle. The point is not one dramatic gift. The point is a rescue fund we can count on when the next dog needs a yes.</p>
-        ${button("Give now", contact.currentDonateUrl)}
+        <p>Monthly giving is one of the simplest ways to create steady support. A dependable base helps the rescue say yes with less scrambling.</p>
+        ${button("Donate", contact.currentDonateUrl)}
       </div>
       <div class="donate-copy reveal delay-1">
-        <h2>Small monthly money becomes security.</h2>
+        <h2>No amount is too small to matter.</h2>
         <p>One gift can feel small from the outside. Pooled together, those gifts become food, emergency medical care, medicine, shelter, bedding, overhead, and staff support.</p>
-        <p>Named receipts make the impact sharper. The core truth is already clear: recurring support lets the rescue act before a story goes viral.</p>
+        <p>Recurring support helps before a story goes viral. One-time donations help meet urgent needs as they come.</p>
       </div>
     </section>
     <section class="impact-section">
@@ -817,7 +812,7 @@ function donatePage() {
     </section>`;
   return layout({
     title: "Donate",
-    description: "Donate monthly to Underdog Heroes and help create a stable base for urgent power-breed rescue work.",
+    description: "Donate to Underdog Heroes and help provide food, vet care, medication, supplies, and emergency support for rescue dogs.",
     active: "donate",
     body,
     pageClass: "donate-page"
@@ -828,13 +823,13 @@ function aboutPage() {
   const body = `
     ${hero({
       eyebrow: "About the rescue",
-      title: "Truth is the operating model.",
-      intro: "Underdog Heroes started with one foster dog and became a rescue for the dogs most people are not equipped to handle.",
+      title: "Transparency is the promise.",
+      intro: "Underdog Heroes started with one foster dog and grew into a rescue built on honesty, preparation, and second chances.",
       cta: [button("Volunteer", "/volunteer/"), button("Contact", "/contact/", "secondary")],
       posterMood: "mastiff",
       image: "last-hope",
       posterTitle: "Built",
-      posterKicker: "For hard cases"
+      posterKicker: "On honesty"
     })}
     <section class="longform-section">
       <div class="longform-copy reveal">
@@ -843,12 +838,12 @@ function aboutPage() {
       <aside class="founder-aside reveal delay-1">
         <p class="section-kicker">Founder and President</p>
         <h2>Shoshi Gamliel</h2>
-        <p>Her standard is simple: tell the truth about the dog, do the work before placement, and keep supporting the adopter after the dog goes home.</p>
+        <p>Her standard is simple: be transparent about each dog's needs, prepare people before placement, and keep supporting the adopter after the dog goes home.</p>
       </aside>
     </section>`;
   return layout({
     title: "About",
-    description: "The Underdog Heroes founder story and rescue philosophy.",
+    description: "The Underdog Heroes founder story and rescue philosophy, centered on transparency and second chances.",
     active: "about",
     body
   });
@@ -858,18 +853,18 @@ function faqPage() {
   const body = `
     ${hero({
       eyebrow: "FAQ",
-      title: "The DMs, answered once.",
-      intro: "The same rescue basics should not live only in DMs. Start here before you apply, foster, volunteer, or donate.",
+      title: "Questions, answered clearly.",
+      intro: "Start here before you apply, foster, volunteer, or donate. If you still have questions, reach out.",
       cta: [button("Apply to adopt", "/adopt/"), button("Contact", "/contact/", "secondary")],
       posterMood: "list",
       image: "adopt-application",
       posterTitle: "Answers",
-      posterKicker: "Before DMs"
+      posterKicker: "Start here"
     })}
     <section class="faq-section" aria-labelledby="faq-title">
       <div class="section-heading">
-        <p class="section-kicker">Straight answers</p>
-        <h2 id="faq-title">No sugar coating.</h2>
+        <p class="section-kicker">Helpful basics</p>
+        <h2 id="faq-title">Clear answers help dogs get home.</h2>
       </div>
       <div class="faq-list">
         ${faqs.map((faq) => `
@@ -881,7 +876,7 @@ function faqPage() {
     </section>`;
   return layout({
     title: "FAQ",
-    description: "Straight answers about adopting, fostering, donating, and power-breed rescue with Underdog Heroes.",
+    description: "Helpful answers about adopting, fostering, donating, volunteering, and supporting Underdog Heroes.",
     active: "faq",
     body
   });
@@ -891,13 +886,13 @@ function contactPage() {
   const body = `
     ${hero({
       eyebrow: "Contact",
-      title: "Route yourself to the right inbox.",
-      intro: "The faster the message lands in the right place, the faster the work gets back to the dogs.",
+      title: "Reach the right person faster.",
+      intro: "Choose the inbox that matches your question so the rescue team can respond as clearly as possible.",
       cta: [button("Email general inbox", `mailto:${contact.infoEmail}`), button("Donate", "/donate/", "secondary")],
       posterMood: "doorway",
       image: "volunteer-tools",
       posterTitle: "Inbox",
-      posterKicker: "Route clearly"
+      posterKicker: "Reach out"
     })}
     <section class="contact-section">
       <div class="contact-list">
@@ -916,8 +911,8 @@ function contactPage() {
           </a>`).join("")}
       </div>
       <div class="mailing-block reveal">
-        <p class="section-kicker">Mailing address</p>
-        <p>19069 Van Buren Blvd. Ste 114 PMB 144<br>Riverside, CA 92508</p>
+        <p class="section-kicker">Donation questions</p>
+        <p>For mailed checks, tax receipts, or donation questions, email Donations@Underdogheroes.org.</p>
       </div>
     </section>`;
   return layout({
